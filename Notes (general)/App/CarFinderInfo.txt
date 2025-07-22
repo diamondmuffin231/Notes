@@ -1,0 +1,158 @@
+READ.ME docs
+
+
+6.6.2025 
+Blueprints
+	Pre-Run 
+		* Can it detect when I have been in a car? (not really a necessary
+			- No Car detection 
+			- Maybe with GPS (moving from one location to another, too fast to be walk)
+		* Make it work with Bixby/Google Assist 
+		
+	Running 
+		* 
+	
+
+-------------------------------------------------------------------------
+
+2.15.2025 -> 4.18.2025 
+	
+	1,1 :
+	"source code" - refers to the human-readable code written by developers 
+	to create an Android application. It includes all the files that 
+	define the app's behavior, user interface, and functionality. 
+	The source code is written primarily in Java or Kotlin, along 
+	with XML for UI layouts.
+	
+	1,2 : 
+	"resources" - Resources are the additional files and static content 
+	that your code uses, such as bitmaps, layout definitions, user 
+	interface strings, animation instructions, and more.
+	
+	1,3 : 
+	"activities (& main acitivty)"  
+		Android system initates code in an Activity instance by invoking specific 
+		callback methods that correspond to specific stages of its lifecycle.
+		Apps don't always begin in the same place. The activity class
+		is designed to facilitate this paradigm. When one app invokes 
+		another, the calling app invokes an activity in the other app.
+		The activity serves as the entry point for an app's interation
+		with the user. 
+		
+		An activity is implemented as a subclass of the 'Activity class'.
+		
+		An acitvity provides the window in which the app draws its UI.
+		
+		
+		Most apps contain multiple screens, which means they comprise 
+		multiple activities. Typically, one acitivty in app is specifies as 
+		the main acitivty. Although activities work together to form a cohe-
+		sive user experience in an app, each activity is only loosely bound
+		to the other activities; they are usually minimal dependencies among 
+		the activities in an app. 
+								
+		To use acitivites in your app, you must register information about them
+		in the app's 'manifest', and you must manage activity lifecycles appropri-
+		ately. 
+		
+								{configuring (in) the manifest}
+		To use activities, you must declare the activities, and certain of their 
+		attributes, in the manifest. 
+		
+								{declare activities}
+		To declare your acitivty, open your manifest file and add an <activity>
+		element as a child of the <application> element. 
+		
+			*** An app manifest is the file named (AndroidManifest.xml) ***
+			*** Acitivities are declared inside the <application> element ***
+			
+		
+		The only required attribute for this element, which specifies the class 
+		name of the activity is 'android:name' . You can also add attributes 
+		that define activity characteristics. 
+			*** After you publish your app, you should not change activity names ***
+			
+								{Declare intent filters}
+		
+		
+		
+	
+		
+	
+		* declaration - We declare activities in the AndroidManifest.xml. 
+		
+	1,4 : 
+	"Fragments" 
+	
+
+
+2.10.2025
+
+() - files or folder/file location
+	
+	******************************************************************
+	******************************************************************
+	******************************************************************
+	
+Overview 
+	1. Project Structure 
+		- source code (app/src/main/java/)
+		- resources [images, strings, & more] (app/src/main/res/)
+	2. Essential Files
+		- Main Files :
+			1. MainActivity
+				* Acts as the entry point for the app.
+				* Loads the UI and initializes the fragments or views.
+			2. Fragments or Acitivities (e.g., FirstFragment, SecondFragment)
+				* Used for specific UI screens or functionalities (like ca-
+				r location maps, settings, or list views. 
+			3. ViewModel Classes
+				* For handling UI-related data, ensuring lifecycle safely.
+			4. Repository Classes 
+				* Manage data operations [e.g., fetching car location, sav-
+				ing data locally].
+		- Manifest File :
+			5. (AndroidManifest.xml)
+				* Declares app components like activities, permissions, 
+				and services.
+		- Resources :
+			6. Layouts (res/layout/)
+				* (activity_main.xml for your main activity UI.				
+				* Fragment-specific XML files (e.g., fragment_first.xml)
+			7. Drawables (res/drawable/)
+				* For icons, splash screens, or vector assets.
+			8. Strings (res/values/strings.xml)
+				* Store all app text for localization.
+			9. Themes (res/values/themes.xml)
+				* Define colors and themes for your app. 
+		- Map & Location Integration :
+			10. Google Maps API Key
+				* Stored in (res/values/secrets.xml) or (local.properties)
+				* Ensure integration with the Maps SDK.
+			11. Location Utilities 
+				* Java/Kotlin files to handle GPS, network-based location,
+				and geofencing. 
+		- Other Components : 
+			12. Networking Classes (e.g., Retrofit or OkHttp)
+				* To communicate with backend (if needed)
+			13. Database/Storage
+				* Room Database or SharedPreferences to store data like 
+				saved car locations.
+			14. Unit Tests (src/test/java)
+				* Validate functionality.
+			15.	Instrumented Test (src/androidTest/java)
+				* UI tests for Android devices. 
+		- Optional Enhancements "
+			16. Wear OS Companion Files (if Watch functionality is included)
+				* Use DataClient? for syncing data between the phone and the 
+				watch
+			17. Custom Notification Services 
+				* To alert users about the car's location or proximity. 
+			
+				
+	******************************************************************
+	******************************************************************
+	******************************************************************
+	
+
+		

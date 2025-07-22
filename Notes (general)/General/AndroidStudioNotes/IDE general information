@@ -1,0 +1,14 @@
+
+# Android Studio Basics 
+
+***********************************************************
+***********************************************************
+***********************************************************
+
+
+
+		* Activities 
+			● Main Activity 
+				- The main activity is declared in the AndroidManifest.xml file 
+				- The main activity is found in the MainActivity.kt file
+			
