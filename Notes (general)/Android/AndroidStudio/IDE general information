@@ -1,24 +1,11 @@
 
 # Android Studio Basics 
 
-7.22.2025 @ 12:00pm 
-	Added information on Activities
+9.2.2025
+Add Folder /App Architecture or /App Component 
+	Add File that exmaplains (App Component Stuff)
+	Keep Basic Idea on this file (for refrence) 
 
-7.28.2025 @ 2:54pm
-	Added more information on Activities & General 
-	
-8.4.2025 @ 12:52pm
-	Added a bit to general 
-	Added info on Modules 
-
-
-	Table of Contents 
-		- General? 
-			- Modules
-			- Project Files 
-		
-		- Activities
-		- 
 		
 ***********************************************************
 ***********************************************************
@@ -195,36 +182,9 @@ App Architecture
 		  complexity. Furthermore, these patterns allow you to quickly switch 
 		  between test and production implementations.
 		
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+***********************************************************
+***********************************************************
+***********************************************************
 
 ***********************************************************
 ***********************************************************
@@ -239,7 +199,7 @@ App Architecture
 				- The main activity like all other actitvies is declared in 
 					in the manifest file. 
 				
-		● Activities 
+		● Activities Basics/General 
 			~ Declaring activities 
 				- For your app to be able to use activities, you must declare the 
 					activities, and certain of their attributes, in the manifest.
@@ -248,15 +208,16 @@ App Architecture
 				to the Android build tools, the Android operating system, and 
 				Google Play. 
 				
-				- The manifest file is named AndroidManifest.xml.
+					+ The manifest file is named AndroidManifest.xml.
+						app/src/main/AndroidManifest.xml
 					
-				- The main activity like all other actitvies is declared in 
-					in the manifest file. 
+					+ The main activity like all other actitvies is declared in 
+						in the manifest file. 
 					
 				- To declare your activity, open your manifest file and add 
 					an <activity> element as a child of the <application> element. 
 		
-		● Intent filters 
+			○ Intent filters 
 		
 			~General 
 			
@@ -276,10 +237,16 @@ App Architecture
 			~ Declaring intent filters 
 			
 				- Explicit and Implicit requests 
+
+	* Fragments 
+	
+
+
+***********************************************************
+***********************************************************
+***********************************************************		
 				
 				
-				
-7.22.2025 @ 6:01pm
 ***********************************************************
 ***********************************************************
 ***********************************************************
@@ -294,4 +261,5 @@ App Architecture
 				
 				
 					
+
 				
