@@ -6,6 +6,8 @@
 Study the AndroidManifest file. 
 	● App Manifest 
 
+List and organize General section 
+
 9.2.2025
 ● Add Folder /App Architecture or /App Component 
 	○ Add File that exmaplains (App Component Stuff)
@@ -27,33 +29,13 @@ Study the AndroidManifest file.
 			
 		○ App Architecture (1.1.0)
 			◼️ App Components 
-				◻️ Android Manifest?? 
 					◆ General 
-					◆ Activity 
-						◇ Main Activity 
-						◇ Declaring activities 
-							▲ The "manifest file" (AndroidManifest.xml) 
-					◆ Fragments 
-					◆ Services 
-					◆ Content Providers 
-					◆ Broadast Receivers 
-
-
-	* General 
-		~ (1.0.0)
-			- Modules 
-			- Project Files 
-			
-		~ Architecture (1.1.0)
-			- App Components 
-					General 
-					What App Components typically include
-			- Recommended app architecture 		 
-	
-					 
-					 Services 
-					 Content Providers 
-					 Broadast Receivers 
+					◆ What App Components typically include
+					◆ Recommended app architecture 
+					◆ Manage dependencies between components 
+		
+		○ Activities 	
+		
 			
 		
 ***********************************************************
@@ -153,11 +135,11 @@ Project Files
 App Architecture
 
 	● App Component 
-	  A typical Android app contains multiple app components. You 
-	  declare most of these app components in your app manifest. Given 
-	  the conditions of this environment, it's possible for your app 
-      components to be launched individually and out-of-order, and the 
-	  operating system or user can destroy them at any time. 
+	A typical Android app contains multiple app components. You 
+	declare most of these app components in your app manifest. Given 
+ 	the conditions of this environment, it's possible for your app 
+    components to be launched individually and out-of-order, and the 
+	operating system or user can destroy them at any time. 
 		○ App Components typically include :
 			◼️ Activity, Fragment, 
 			◼️ Drive UI from data models
@@ -165,11 +147,11 @@ App Architecture
 			◼️ Unidirectional Data Flow 
 
 		○ Declaring an App Component 
-			◼️ And
-	The "Android Manifest" is the general term for the manifest file 
- 	in any Android component. Not to be confused with the "App Manifest" 
-	which specifically refers to the manifest in the main app module 
-	(app/src/main/AndroidManifest.xml) 
+			◼️ "Android Manifest"
+			   The "Android Manifest" is the general term for the manifest file 
+ 			   in any Android component. Not to be confused with the "App Manifest" 
+			   which specifically refers to the manifest in the main app module 
+			   (app/src/main/AndroidManifest.xml) 
 			  
 		
 	
@@ -225,7 +207,6 @@ App Architecture
 
 Activities 
 		
-
 		● Main Activity 
 			○ Main activity 
 				◼️ The main activity source code is found in the MainActivity.kt file.
@@ -298,4 +279,5 @@ Fragments
 					
 
 				
+
 
