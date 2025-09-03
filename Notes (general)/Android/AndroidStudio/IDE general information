@@ -3,8 +3,8 @@
 ●/○/◼️/◻️/◆/◇/▲/△
 
 9.3.2025
-Study the AndroidManifest file. 
-	● App Manifest 
+● Study the AndroidManifest file. 
+	○ App Manifest 
 
 List and organize General section 
 
@@ -21,26 +21,22 @@ List and organize General section
 ***********************************************************
 ***********************************************************
 ***********************************************************
+General 
+	● Modules 
+	● Project Files 	
+	● App Architecture 
+		○ App Components 
+			◼️ App Components typically include :
+			◼️ Declaring an App Component
+			◼️ Manage dependencies between components 
+	● Activities
+	● Fragments 
+			
+		
+***********************************************************
+***********************************************************
+***********************************************************
 
-	● General 
-		○ ??? (1.0.0)
-			◼️ Modules 
-			◼️ Project Files 
-			
-		○ App Architecture (1.1.0)
-			◼️ App Components 
-					◆ General 
-					◆ What App Components typically include
-					◆ Recommended app architecture 
-					◆ Manage dependencies between components 
-		
-		○ Activities 	
-		
-			
-		
-***********************************************************
-***********************************************************
-***********************************************************
 Modules 
 
 	● Intro to Modules 
@@ -134,7 +130,7 @@ Project Files
 
 App Architecture
 
-	● App Component 
+	● App Component (General)
 	A typical Android app contains multiple app components. You 
 	declare most of these app components in your app manifest. Given 
  	the conditions of this environment, it's possible for your app 
@@ -279,5 +275,6 @@ Fragments
 					
 
 				
+
 
 
