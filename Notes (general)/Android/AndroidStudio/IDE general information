@@ -1,15 +1,43 @@
 
 # Android Studio Basics 
+●/○/◼️/◻️/◆/◇/▲/△
+
+9.3.2025
+Study the AndroidManifest file. 
+	● App Manifest 
 
 9.2.2025
-Add Folder /App Architecture or /App Component 
-	Add File that exmaplains (App Component Stuff)
-	Keep Basic Idea on this file (for refrence) 
+● Add Folder /App Architecture or /App Component 
+	○ Add File that exmaplains (App Component Stuff)
+	○ Keep Basic Idea on this file (for refrence) 
 
 		
 ***********************************************************
 ***********************************************************
 ***********************************************************
+
+***********************************************************
+***********************************************************
+***********************************************************
+
+	● General 
+		○ ??? (1.0.0)
+			◼️ Modules 
+			◼️ Project Files 
+			
+		○ App Architecture (1.1.0)
+			◼️ App Components 
+				◻️ Android Manifest?? 
+					◆ General 
+					◆ Activity 
+						◇ Main Activity 
+						◇ Declaring activities 
+							▲ The "manifest file" (AndroidManifest.xml) 
+					◆ Fragments 
+					◆ Services 
+					◆ Content Providers 
+					◆ Broadast Receivers 
+
 
 	* General 
 		~ (1.0.0)
@@ -18,23 +46,22 @@ Add Folder /App Architecture or /App Component
 			
 		~ Architecture (1.1.0)
 			- App Components 
-				- Android Manifest?? 
-					- General 
-					- Activity 
-						◆ Main Activity 
-						◆ Declaring activities 
-							◇ The "manifest file" (AndroidManifest.xml) 
-					- Fragments 
-					- Services 
-					- Content Providers 
-					- Broadast Receivers 
+					General 
+					What App Components typically include
+			- Recommended app architecture 		 
+	
+					 
+					 Services 
+					 Content Providers 
+					 Broadast Receivers 
 			
 		
 ***********************************************************
 ***********************************************************
 ***********************************************************
+Modules 
 
-	* Modules 
+	● Intro to Modules 
 	A module is a collection of source files/code and build settings 
 	that let you divide your project into discrete units of functionality.
 	Each module can be independently built, tested, and debugged.
@@ -45,8 +72,8 @@ Add Folder /App Architecture or /App Component
 	project, but keep all the files scoped within the same project and share
 	some code.Also when creating code libraries within your own project.
 	
-	Types of modules 
-		- Android app module
+	● Types of modules 
+		○ Android app module
 			Provides a container for your app's source code, resource files, 
 			and app-level settings, such as the module-level build file and
 			Android Manifest file. When you create a new project, the default 
@@ -54,11 +81,11 @@ Add Folder /App Architecture or /App Component
 			and some code templates that are appropriate for the corresponding 
 			app or device type.
 
-		- Feature module 
+		○ Feature module 
 			Represents a modularized feature of your app that can take advantage 
 			of Play Feature Delivery.
 		
-		- Library module 
+		○ Library module 
 			Provides a container for your reusable code, which you can use as a 
 			dependency in other app modules or import into other projects. 
 			Structurally, a library module is the same as an app module, 
@@ -66,19 +93,19 @@ Add Folder /App Architecture or /App Component
 			so it can't be installed on a device.
 			
 			Types of library modules :
-				~ Android Library 
-				~ Android Native Library 
-				~ Java or Kotlin Library 
-				~ Benchmark > Microbenchmark 
+				◼️ Android Library 
+				◼️ Android Native Library 
+				◼️ Java or Kotlin Library 
+				◼️ Benchmark > Microbenchmark 
 				
 		
-		- Test module 
+		○ Test module 
 			Keeps your tests separate from the rest of your code. You can 
 			configure the test module to target specific build variants.
 			
 			Types of test modules :
-				~ Baseline Profile Generator 
-				~ Benchmark > Macrobenchmark 
+				◼️ Baseline Profile Generator 
+				◼️ Benchmark > Macrobenchmark 
 			
 
 
@@ -86,7 +113,9 @@ Add Folder /App Architecture or /App Component
 ***********************************************************
 ***********************************************************
 
-	* Project Files 
+Project Files 
+
+	● Intro to Project Files 
 	Files in Android Studio can be found in the Project View Selector (or 
 	View Mode Selector). The Project View Selector has files in categories 
 	called Project-View-Modes (or Scoopes/View-Presets). 
@@ -97,18 +126,18 @@ Add Folder /App Architecture or /App Component
 	The Android view
 		Some of the structural differences between the Android view and the 
 		structure on disk :
-			~ Gradle Script group
+			○ Gradle Script group
 				A build system transforms your source code into an executable 
 				application. Gradle uses a task-based approach to organize and 
 				run these commands.
-			~ A group with all manifestfiles for each module. 
-			~ Alternative resource files in a single group instead of in seperate 
+			○ A group with all manifestfiles for each module. 
+			○ Alternative resource files in a single group instead of in seperate 
 			folders.
 		  
 		Within each Android app module, files are shown in the following groups:
-			~ manifests : Contains the "AndroidManifest.xml" file.
-			~ java (or Kotlin/Groovy?)
-			~ res 
+			○ manifests : Contains the "AndroidManifest.xml" file.
+			○ java (or Kotlin/Groovy?)
+			○ res 
 
 	
 	The Project view 
@@ -122,41 +151,45 @@ Add Folder /App Architecture or /App Component
 ***********************************************************
 
 App Architecture
-	* App Component 
-	    ● A typical Android app contains multiple app components. You 
-		  declare most of these app components in your app manifest. Given 
-		  the conditions of this environment, it's possible for your app 
-		  components to be launched individually and out-of-order, and the 
-		  operating system or user can destroy them at any time. 
-		  
-			○ The "Android Manifest" is the general term for the manifest file 
-			  in any Android component. Not to be confused with the "App Manifest" 
-			  which specifically refers to the manifest in the main app module 
-			  (app/src/main/AndroidManifest.xml) 
+
+	● App Component 
+	  A typical Android app contains multiple app components. You 
+	  declare most of these app components in your app manifest. Given 
+	  the conditions of this environment, it's possible for your app 
+      components to be launched individually and out-of-order, and the 
+	  operating system or user can destroy them at any time. 
+		○ App Components typically include :
+			◼️ Activity, Fragment, 
+			◼️ Drive UI from data models
+			◼️ SSOT (Single source of truth)
+			◼️ Unidirectional Data Flow 
+
+		○ Declaring an App Component 
+			◼️ And
+	The "Android Manifest" is the general term for the manifest file 
+ 	in any Android component. Not to be confused with the "App Manifest" 
+	which specifically refers to the manifest in the main app module 
+	(app/src/main/AndroidManifest.xml) 
 			  
 		
-		● Activity, Fragment, 
-		● Drive UI from data models
-		● SSOT (Single source of truth)
-		● Unidirectional Data Flow 
 	
-	* Recommended app architecture 
-		● General 
+	● Recommended app architecture 
+		○ General 
 			Each application should have at least two layers. An additional layer 
 		    can be added called the domain layer to simplify and reuse the interactions
 		    between the UI and data layers. 
 				1) UI Layer 
 				x) Domain Layer (optional)
 				2) Data Layer 
-		● Modern App Architecture 
+		○ Modern App Architecture 
 			This Modern App Architecture encourages using the following 
 			techniques, among others:
-		● UI layer 
-		● Data layer 
+		○ UI layer 
+		○ Data layer 
 			The data layer of an app contains the business logic, it's made of 
 			rules that determine how your app creates, stores, and changes data.
 			
-			○ Repository 
+			 Repository 
 				The data layer is made of repositories that each can contain 
 				zero to many data sources.  You should create a repository class
 				for each different type of data you handle in your app.
@@ -172,10 +205,10 @@ App Architecture
 					Each data source class should have the responsibility of work-
 					ing with only one source of data, which can be a file, a netwo-
 					rk source, or a local database. 
-		● Domain Layer 
+    ??? Domain Layer 
 	
-	* Manage dependencies between components 
-		● Classes in your app depend on other classes in order to function properly. 
+	● Manage dependencies between components 
+		○ Classes in your app depend on other classes in order to function properly. 
 		  You can use either "Dependency injection (DI)" or "Service locator". 
 		  These patterns allow you to scale your code because they provide clear 
 		  patterns for managing dependencies without duplicating code or adding 
@@ -190,55 +223,58 @@ App Architecture
 ***********************************************************
 ***********************************************************
 
+Activities 
+		
 
-
-	* Activities 
 		● Main Activity 
-			~ Main activity 
-				- The main activity is found in the MainActivity.kt file.
-				- The main activity like all other actitvies is declared in 
+			○ Main activity 
+				◼️ The main activity source code is found in the MainActivity.kt file.
+				◼️ The main activity like all other actitvies is declared in 
 					in the manifest file. 
 				
 		● Activities Basics/General 
-			~ Declaring activities 
-				- For your app to be able to use activities, you must declare the 
+			○ Declaring activities 
+				◼️ For your app to be able to use activities, you must declare the 
 					activities, and certain of their attributes, in the manifest.
 				
-				- The manifest file describes essential information about your app 
+				◼️ The manifest file describes essential information about your app 
 				to the Android build tools, the Android operating system, and 
 				Google Play. 
 				
-					+ The manifest file is named AndroidManifest.xml.
+					◻️ The manifest file is named AndroidManifest.xml.
 						app/src/main/AndroidManifest.xml
 					
-					+ The main activity like all other actitvies is declared in 
+					◻️ The main activity like all other actitvies is declared in 
 						in the manifest file. 
 					
-				- To declare your activity, open your manifest file and add 
+				◼️ To declare your activity, open your manifest file and add 
 					an <activity> element as a child of the <application> element. 
 		
 			○ Intent filters 
 		
-			~General 
-			
-				- If you intend for your app to be self-contained and not allow 
-					other apps to activate its activities, you don't need any 
-					other intent filters. Activities that you don't want to make 
-					available to other applications should have no intent filters, 
-					and you can start them yourself using explicit intents.
+				◼️ General 
+				If you intend for your app to be self-contained and not allow 
+				other apps to activate its activities, you don't need any 
+				other intent filters. Activities that you don't want to make 
+				available to other applications should have no intent filters, 
+				and you can start them yourself using explicit intents.
 					
-				- Intent filters provide the ability to launch an activity based 
-					not only on an explicit request, but also an implicit one. 
+				Intent filters provide the ability to launch an activity based 
+				not only on an explicit request, but also an implicit one. 
 					
-				- Intent filters are attributes (not elements)
+				Intent filters are attributes (not elements)
 				
-				- Intent filter elements include 
+				Intent filter elements include 
 		
-			~ Declaring intent filters 
+				◼️ Declaring intent filters 
 			
-				- Explicit and Implicit requests 
+				??? Explicit and Implicit requests 
 
-	* Fragments 
+***********************************************************
+***********************************************************
+***********************************************************
+
+Fragments 
 	
 
 
@@ -251,8 +287,7 @@ App Architecture
 ***********************************************************
 ***********************************************************
 
-		● Declare permissions 
-		
+
  
 
 
@@ -263,3 +298,4 @@ App Architecture
 					
 
 				
+
