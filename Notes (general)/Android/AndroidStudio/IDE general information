@@ -200,8 +200,8 @@ Activities
 	● Main Activity 
 		○ Main activity 
 			◼️ The main activity source code is found in the MainActivity.kt file.
-			◼️ The main activity like all other actitvies is declared in 
-				in the manifest file. 
+				◻️ ProjectName/app/src/main/java/com/example/project_name/MainActivity.kt 
+			◼️ The main activity like all other actitvies is declared in in the manifest file. 
 				
 	● Activities Basics/General 
 		○ Declaring activities 
@@ -264,6 +264,7 @@ App Manifest (File)
 					
 
 				
+
 
 
 
