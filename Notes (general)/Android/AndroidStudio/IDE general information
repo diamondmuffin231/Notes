@@ -2,6 +2,9 @@
 # Android Studio Basics 
 ●/○/◼️/◻️/◆/◇/▲/△
 
+9.5.2025
+● Study Layout 
+
 9.3.2025
 ● Study the AndroidManifest file. 
 	○ App Manifest 
@@ -26,6 +29,7 @@
 ● Activities
 ● Fragments 
 ● App Manifest (File)
+● Layout 
 
 ***********************************************************
 ***********************************************************
@@ -253,6 +257,16 @@ App Manifest (File)
 ***********************************************************
 ***********************************************************
 
+Layout 
+	● General/Intro/Basics 
+	A layout defines the structure for a user interface in your app. 
+
+	● View/ViewGroup 
+	All elements in the layout are built using a hierarchy of "View" and "ViewGroup" objects. . A "View" usually 
+	draws something the user can see and interact with. A "ViewGroup" is an invisible container that defines the 
+	layout structure for "View" and other "ViewGroup" objects. 
+
+	
 
  
 
@@ -264,6 +278,7 @@ App Manifest (File)
 					
 
 				
+
 
 
 
