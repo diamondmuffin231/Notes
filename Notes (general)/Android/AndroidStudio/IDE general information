@@ -1,19 +1,25 @@
 
 # Android Studio Basics 
-●/○/◼️/◻️/◆/◇/▲/△
+●/○/◼️/◻️/◆/◇/▲/△ ✔
 
-9.5.2025
-● Study Layout 
-
-9.3.2025
-● Study the AndroidManifest file. 
-	○ App Manifest 
-
-● List and organize General section 
-
+9.6.2025
+● App Manifest/AndroidManifest file
 ● Add Folder /App Architecture or /App Component 
 	○ Add File that exmaplains (App Component Stuff)
 	○ Keep Basic Idea on this file (for refrence) 
+● Study Layout 
+● Database 
+	○ SQLite (Structured Query Language) & Room (library) 
+	○ Creating a database 
+		0. Create a DB folder 
+		1. Folder Structure
+		2. Add Dependencies
+		3a. Entity
+		3b. DAO
+		3c. Database Class
+		4. Main Activity
+		5. Layout File
+
 
 ***********************************************************
 ***********************************************************
@@ -257,6 +263,8 @@ App Manifest (File)
 ***********************************************************
 ***********************************************************
 
+
+
 Layout 
 	● General/Intro/Basics 
 	A layout defines the structure for a user interface in your app. 
@@ -266,11 +274,23 @@ Layout
 	draws something the user can see and interact with. A "ViewGroup" is an invisible container that defines the 
 	layout structure for "View" and other "ViewGroup" objects. 
 
+***********************************************************
+***********************************************************
+***********************************************************
+
+Database 
+		0. Create a DB folder ✔
+		1. Folder Structure 
+		2. Add Dependencies
+		3a. Entity
+		3b. DAO
+		3c. Database Class
+		4. Main Activity
+		5. Layout File
+
+	● Create db/
+		○ app/src/main/java/com/example/myapp/db 
 	
-
- 
-
-
 					
 
 				
@@ -278,6 +298,7 @@ Layout
 					
 
 				
+
 
 
 
