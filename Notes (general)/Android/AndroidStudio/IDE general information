@@ -11,16 +11,14 @@
 ● Database 
 	○ SQLite (Structured Query Language) & Room (library) 
 	○ Creating a database 
-		0. Create a DB folder 
-		1. Folder Structure
+		1. Create a DB folder 
 		2. Add Dependencies
 		3a. Entity
 		3b. DAO
 		3c. Database Class
-		4. Main Activity
-		5. Layout File
-
-
+		4. Using the database 
+		5. Layout File (optional for different UI?)
+ 
 ***********************************************************
 ***********************************************************
 ***********************************************************
@@ -298,6 +296,7 @@ Database
 					
 
 				
+
 
 
 
