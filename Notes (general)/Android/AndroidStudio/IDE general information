@@ -7,7 +7,7 @@
 ● Add Folder /App Architecture or /App Component 
 	○ Add File that exmaplains (App Component Stuff)
 	○ Keep Basic Idea on this file (for refrence) 
-● Study Layout 
+● Study Layout subject  
 ● Database 
 	○ SQLite (Structured Query Language) & Room (library) 
 	○ Creating a database 
@@ -18,6 +18,10 @@
 		3c. Database Class
 		4. Using the database 
 		5. Layout File (optional for different UI?)
+
+***********************************************************
+***********************************************************
+***********************************************************
  
 ***********************************************************
 ***********************************************************
@@ -277,17 +281,26 @@ Layout
 ***********************************************************
 
 Database 
-		0. Create a DB folder ✔
-		1. Folder Structure 
-		2. Add Dependencies
-		3a. Entity
-		3b. DAO
-		3c. Database Class
-		4. Main Activity
-		5. Layout File
+		● General 
+			0. Create a DB folder ✔
+			1. Folder Structure 
+			2. Add Dependencies
+			3a. Entity
+			3b. DAO
+			3c. Database Class
+			4. Main Activity
+			5. Layout File (optional??) 
 
-	● Create db/
-		○ app/src/main/java/com/example/myapp/db 
+		● 0) Create db/
+			○ folder/file location : app/src/main/java/com/example/myapp/db 
+			
+		● 1) Add Dependencies 
+			○ folder/file location : app/build.gradle
+
+		● 2) Entity 
+			○ folder/file location : app/src/main/java/com/example/myapp/db/User.kt
+			
+	
 	
 					
 
@@ -296,6 +309,7 @@ Database
 					
 
 				
+
 
 
 
