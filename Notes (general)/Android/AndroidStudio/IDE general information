@@ -280,35 +280,100 @@ Layout
 ***********************************************************
 ***********************************************************
 
-Database 
-		● General 
-			0. Create a DB folder ✔
-			1. Folder Structure 
-			2. Add Dependencies
-			3a. Entity
-			3b. DAO
-			3c. Database Class
-			4. Main Activity
-			5. Layout File (optional??) 
+● Database (ChatGPT & Android Studio) 
+	○ General 
+		0. Create a DB folder ✔
+		1. Folder Structure 
+		2. Add Dependencies
+		3a. Entity
+		3b. DAO
+		3c. Database Class
+		4. Main Activity
+		5. Layout File (optional??) 
 
-		● 0) Create db/
-			○ folder/file location : app/src/main/java/com/example/myapp/db 
+	○ 0) Create db/
+		◼️ folder/file location : app/src/main/java/com/example/myapp/db 
 			
-		● 1) Add Dependencies 
-			○ folder/file location : app/build.gradle
+	○ 1) Add Dependencies 
+		◼️ folder/file location : app/build.gradle
 
-		● 2) Entity 
-			○ folder/file location : app/src/main/java/com/example/myapp/db/User.kt
-			
-	
-	
+	○ 2) Entity 
+		◼️ folder/file location : app/src/main/java/com/example/myapp/db/User.kt
+
+------------------------------------------------------------------------------------------------------------
+____________________________________________________________________________________________________________
+____________________________________________________________________________________________________________
+------------------------------------------------------------------------------------------------------------
+
+● Database (Android Studio & ChatGPT)
+	○ Setup (app/build.gradle)
+	To use Room in your app, add the following dependencies to your app's build.gradle file.
+
+	code 
+
+	dependencies {
+    val room_version = "2.8.0"
+	...
+	}
+
+	○ Primary components 
+		◼️ General 
+			There are three major components in Room : Database class, Data entities, DAO. The database class provides your app with 
+			instances of the DAOs associated with that database. In turn, the app can use the DAOs to retrieve data from the database 
+			as instances of the associated data entity objects. The app can also use the defined data entities to update rows from the 
+			corresponding tables, or to create new rows for insertion. 
+
+		◼️ Database class (app/src/main/java/com/example/myapp/db/AppDatabase.kt)
+			The database class that holds the database and serves as the main access point for the underlying connection to 
+		    your app's persisted data. 
+
+			code
+
+			@Database(...) 
+				... class ... {} 
+
+		◼️ Data entities (app/src/main/java/com/example/myapp/db/User.kt) 
+			Data entities that represent tables in your app's database.
+
+			code 
+
+			@Entity 
+				data class User(...)
+
+		◼️ DAO (Data Access Objects) (app/src/main/java/com/example/myapp/db/UserDao.kt)
+			Data access objects (DAOs) that provide methods that your app can use to query, update, insert, and delete data in 
+			the database.
+
+			code 
+
+			@Dao
+			interface UserDao {...}
+
+
+	○ Usage
+		◼️ After you have defined the data entity, the DAO, and the database object, you can use the following code to create an 
+		instance of the database.userDao
+
+		code (app/src/main/java/com/example/myapp/db/AppDatabase.kt)
+
+		val db = Room.databaseBuilder(...).build()
 					
+		You can then use the abstract methods from the AppDatabase to get an instance of the DAO. In turn, you can use the methods 
+		from the DAO instance to interact with the database.
+				
+		code (app/src/main/java/com/example/myapp/MainActivity.kt)
 
-				
-				
-					
+		val userDao = db.userDao()
+		val users: List<User> = userDao.getAll()
 
+	○ Note 
+		◼️ If your app runs in a single process, you should follow the singleton design pattern when instantiating an AppDatabase 
+		object. Each RoomDatabase instance is fairly expensive, and you rarely need access to multiple instances within a single 
+		process. If your app runs in multiple processes, include enableMultiInstanceInvalidation() in your database builder invocation. 
+
+		
 				
+
 
 
 
