@@ -242,6 +242,13 @@ Activities
 			and you can start them yourself using explicit intents.
 		
 			◼️ Declaring intent filters 
+
+	● Notes
+
+		○ It's a common mistake to write all your code in an Activity or a Fragment. 
+		These UI-based classes should only contain logic that handles UI and operating 
+		system interactions. To provide a satisfactory user experience and a more manageable 
+		app maintenance experience, it's best to minimize your dependency on them.
 			
 	??? Explicit and Implicit requests 
 
@@ -299,6 +306,7 @@ Layout
 ------------------------------------------------------------------------------------------------------------
 ____________________________________________________________________________________________________________
 ____________________________________________________________________________________________________________
+
 ------------------------------------------------------------------------------------------------------------
 
 ● Database (Android Studio & ChatGPT)
@@ -313,6 +321,7 @@ ________________________________________________________________________________
 	}
 
 	○ Primary components 
+
 		◼️ General 
 			There are three major components in Room : Database class, Data entities, DAO. The database class provides your app with 
 			instances of the DAOs associated with that database. In turn, the app can use the DAOs to retrieve data from the database 
@@ -336,17 +345,46 @@ ________________________________________________________________________________
 			@Entity 
 				data class User(...)
 
+
+
+
 		◼️ DAO (Data Access Objects) (app/src/main/java/com/example/myapp/db/UserDao.kt)
-			Data access objects (DAOs) that provide methods that your app can use to query, update, insert, and delete data in 
-			the database.
+			Data access objects (DAOs) provide methods that your app can use to query, update, 
+			insert, and delete data in the database.
+
+			When you use the Room persistence library to store your app's data, you interact 
+			with the stored data by defining DAO (Data Access Objects).
 
 			code 
 
 			@Dao
 			interface UserDao {...}
 
+			Each DAO includes methods that offer abstract access to your app's database. At c-
+			ompile time, Room automatically generates implementations of the DAOs that you define.
+
+				◻️ Define 
+				You can define each DAO as either an interface or an abstract class. For basic 
+				use cases, you usually use an interface.
+
+				You must always annotate your DAOs with @Dao. DAOs don't have properties, but 
+				they do define one or more methods for interacting with the data in your app's 
+				database.
+
+				◻️ There are two types of DAO methods that define database interactions :
+					◆ Convenience methods - that let you insert, update, and delete rows in 
+					your database without writing any SQL code. 
+					
+					◆ Query methods - that let you write your own SQL query to interact with 
+					the database.
+
+
+
+
+
 
 	○ Usage
+
 		◼️ After you have defined the data entity, the DAO, and the database object, you can use the following code to create an 
 		instance of the database.userDao
 
@@ -369,6 +407,7 @@ ________________________________________________________________________________
 
 		
 				
+
 
 
 
